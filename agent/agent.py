@@ -53,7 +53,13 @@ def select_tools(mode: str):
 #    config.GEMINI_MODEL, POLICY_AGENT_PROMPT as the instruction, and
 #    select_tools(config.RETRIEVAL_MODE) as its tools. Assign it to root_agent."
 # ===========================================================================
-root_agent = None  # <-- replace this with your LlmAgent(...)
+root_agent = LlmAgent(
+    model=config.GEMINI_MODEL,
+    name="hr_policy_agent",
+    description="Answers Altostrat Singapore employee HR policy questions grounded in the Employee Policy Handbook.",
+    instruction=POLICY_AGENT_PROMPT,
+    tools=select_tools(config.RETRIEVAL_MODE),
+)
 
 
 # ---------------------------------------------------------------------------

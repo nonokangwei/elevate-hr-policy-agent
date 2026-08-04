@@ -153,6 +153,7 @@ Follow **`rag/README.md`**: `terraform apply`, ingest the PDF, and verify:
 # needs a provisioned Vertex data store (see rag/README.md):
 uv run python rag/verify-rag-search.py --query "outpatient sick leave and medical certificate"
 # no GCP yet? the offline mock still exercises the parser:
+
 uv run python rag/verify-rag-search.py --mock --query "sick leave"
 ```
 
