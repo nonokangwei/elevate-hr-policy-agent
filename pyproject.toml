@@ -7,7 +7,7 @@ dependencies = [
     "google-adk",
     "google-cloud-discoveryengine",
     "google-cloud-storage",
-    "python-dotenv>=1.0.0",
+    "python-dotenv>=1.2.2",
     "pyyaml",
     "pypdf",
 ]
